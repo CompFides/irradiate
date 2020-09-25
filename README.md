@@ -5,6 +5,7 @@ Run Atomic Red Team from Ansible against Linux or Windows based systems
 Copy irradiate directory to /etc/ansible/roles/<br>
 Copy irradiate.yml playbook to /etc/ansible/<br>
 Copy irradiate_hosts file to /etc/ansible/<br>
+Pull Atomic Red Team git and save to ../irradiate/files/
 
 ## Configure Hosts to Test
 Edit irradiate_hosts<br>
