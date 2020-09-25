@@ -1,0 +1,11 @@
+---
+
+# file: ../roles/irradiate/tasks/windows.yml
+
+- name Powershell
+  win_shell: {{ command }}
+  when: {{ ansible_cmd }} == "win_shell"
+
+- name Command Prompt
+  win_command: {{ command }}
+  when: {{ansible_cmd }} == "win_command"

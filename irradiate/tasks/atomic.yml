@@ -1,0 +1,11 @@
+---
+
+# file: ./tasks/atomic.yml
+
+- name: atomic linux
+  include_tasks: linux.yml
+  when: atomics[atomic]['supported_platforms'] == "linux"
+
+- name: atomic windows
+  include_tasks: windows.yml
+  when: atomics[atomic]['supported_platforms'] == "windows"

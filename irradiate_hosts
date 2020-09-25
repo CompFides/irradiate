@@ -1,0 +1,11 @@
+---
+# file:  irradiate_hosts
+all:
+  hosts:
+    localhost:
+      gather_facts: False
+      art_techniques:
+        - T1053.001
+        - T1053.003
+        - T1059.004
+        - T1543.002

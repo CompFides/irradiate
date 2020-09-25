@@ -1,0 +1,8 @@
+supported_platforms:
+  windows:
+    powershell: win_shell
+    command_prompt: win_command
+    manual: manual
+  linux:
+    sh: shell
+    bash: shell

@@ -1,0 +1,8 @@
+atomic_tests:
+- name: At - Schedule a job
+
+  input_arguments:
+    time_spec:
+      default: now + 5 minute
+    at_command:
+      default: echo Hello from custom

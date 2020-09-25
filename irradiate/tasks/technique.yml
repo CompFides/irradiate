@@ -1,0 +1,25 @@
+---
+
+# file: ../roles/art_test/tasks/technique.yml
+
+
+- name: technique include technique
+  include_vars:
+    file: "{{ item | process_technique }}"
+    name: atomics
+
+- name: technique cleanup after include
+  file:
+    path: /etc/ansible/roles/art_test/vars/{{ item }}.yaml
+    state: absent
+  delegate_to: localhost
+
+- name: technique process atomics
+  include_tasks: atomic.yml
+  with_items: "{{ atomics }}"
+  loop_control:
+    loop_var: atomic
+
+
+
+

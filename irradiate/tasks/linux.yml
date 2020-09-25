@@ -1,0 +1,7 @@
+---
+
+# file: ../roles/irradiate/tasks/linux.yml
+
+- name: bash
+  shell: {{ command }}
+  when: {{ ansible_cmd }} == "shell"

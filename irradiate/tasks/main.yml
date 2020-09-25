@@ -1,0 +1,20 @@
+---
+
+# file: /roles/art_test/tasks/main.yml
+
+#- name: List loop test
+#  debug:
+#    msg: "art_technique: {{ item }}"
+#  with_items: "{{ art_techniques }}"
+
+- name: main include technique
+  include_tasks: technique.yml
+  with_items: "{{ art_techniques }}"
+
+#- name: main cleanup yaml
+#  file:
+#    path: "{{ item }}"
+#    state: absent
+#  delegate_to: 127.0.0.1
+#  with_fileglob: /etc/ansible/roles/art_test/vars/*.yaml
+    

