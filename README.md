@@ -1,5 +1,5 @@
 # IRRADIATE
-Run Atomic Red Team from Ansible against Linux or Windows based systems
+Run Atomic Red Team techniques from Ansible against Linux or Windows based systems to test detection capabilities.
 
 ## Setup
 Copy irradiate directory to /etc/ansible/roles/<br>
